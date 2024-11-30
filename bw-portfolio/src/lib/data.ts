@@ -52,20 +52,34 @@ export const workExperience: WorkExperience[] = [
     title: "Helpdesk Officer",
     company: "KSB Australia",
     location: "Bundamba, QLD",
-    startDate: new Date("2022-08-24"),
+    startDate: new Date("2022-10-24"),
     description: "Provided technical support and solutions...",
     responsibilities: ["Resolved technical issues for 100+ users"],
     skills: ["Technical Support", "Problem Solving", "Communication"],
   },
-  // Add other work experience...
+  {
+    title: "Assistant Manager",
+    company: "Hungry Jacks",
+    location: "Booval, QLD",
+    startDate: new Date("2021-07-04"),
+    endDate: new Date("2022-08-24"),
+    description:
+      "One of several Assistant Managers at the Booval Hungry Jacks restaurant.",
+    responsibilities: [
+      "Supervised a team of 10+ staff",
+      "Maintained food safety standards",
+      "Resolved customer issues",
+    ],
+    skills: ["Conflict Resolution", "Communication", "Leadership", "Teamwork"],
+  },
 ];
 
 export const education: Education[] = [
   {
-    degree: "Bachelor of IT in Computer Science",
+    degree: "Bachelor of IT in Computer Science (with Distinction)",
     institution: "Queensland University of Technology",
     gpa: 6.208,
-    graduationDate: new Date("2024-12-16"),
+    graduationDate: 2024,
     notableProjects: [
       {
         title: "Project Title",
@@ -74,13 +88,23 @@ export const education: Education[] = [
       },
     ],
   },
-  // Add other education...
+  {
+    degree: "Queensland Certificate of Education",
+    institution: "St Edmund's College",
+    graduationDate: 2018,
+    notableProjects: [
+      {
+        title: "Top Achiever",
+        description: "Biological Science",
+      },
+    ],
+  },
 ];
 
 export const personalInfo: PersonalInfo = {
   name: "Brandon Wiedman",
   bio: "Passionate software developer with experience...",
-  interests: ["Web Development", "Open Source"],
+  interests: ["Web Development", "Open Source", "Linux", "Gaming"],
   githubUrl: "https://github.com/WhatTheShuck",
   linkedinUrl: "https://au.linkedin.com/in/brandon-wiedman-541965239",
   email: "contact@brandonwiedman.com",

@@ -24,8 +24,8 @@ export interface WorkExperience {
 export interface Education {
   degree: string;
   institution: string;
-  gpa: number;
-  graduationDate: Date;
+  gpa?: number;
+  graduationDate: number;
   notableProjects: {
     title: string;
     description: string;

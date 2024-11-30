@@ -1,4 +1,4 @@
-import { projects, workExperience, personalInfo } from "@/lib/data";
+import { projects, workExperience, personalInfo, education } from "@/lib/data";
 import { Inter } from "next/font/google";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +63,9 @@ export default function Home() {
           </div>
         </div>
       </nav>
+      <br />
+      <br />
+      <br />
 
       {/* Projects Section */}
       <section id="projects" className="space-y-6">
@@ -120,6 +123,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <br />
 
       {/* Work Experience Section */}
       <section id="experience" className="space-y-6">
@@ -155,6 +159,43 @@ export default function Home() {
                       {skill}
                     </Badge>
                   ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+      <br />
+
+      {/* Education Section */}
+      <section id="education" className="space-y-6">
+        <h2 className="text-3xl font-bold">Education</h2>
+        <div className="space-y-6">
+          {education.map((place) => (
+            <Card
+              key={place.degree}
+              className="hover:shadow-lg transition-shadow"
+            >
+              <CardHeader>
+                <CardTitle>
+                  {place.degree} at {place.institution}
+                </CardTitle>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar size={16} className="mr-2" />
+                  {place.graduationDate}
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {place.gpa && <p className="text-gray-600">GPA: {place.gpa}</p>}
+                <div>
+                  <h4 className="font-semibold mb-2">Notable Projects:</h4>
+                  <ul className="list-disc pl-5 space-y-1">
+                    {place.notableProjects.map((project, index) => (
+                      <li key={index} className="text-gray-600">
+                        {project.title} - {project.description} {project.grade}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </CardContent>
             </Card>
