@@ -1,7 +1,0 @@
-{
-	"dependencies": {
-		"create-next-app": "^15.0.3",
-		"lucide-react": "^0.462.0",
-		"shadcn-ui": "^0.9.3"
-	}
-}
