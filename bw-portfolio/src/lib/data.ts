@@ -103,8 +103,8 @@ export const education: Education[] = [
 
 export const personalInfo: PersonalInfo = {
   name: "Brandon Wiedman",
-  bio: "Passionate software developer with experience...",
-  interests: ["Web Development", "Open Source", "Linux", "Gaming"],
+  bio: "Passionate software developer in Brisbane, Queensland with experience in web development and a strong interest in open source.",
+  interests: ["Open Source", "Linux", "Gaming", "Web Development"],
   githubUrl: "https://github.com/WhatTheShuck",
   linkedinUrl: "https://au.linkedin.com/in/brandon-wiedman-541965239",
   email: "contact@brandonwiedman.com",
