@@ -80,11 +80,42 @@ export const education: Education[] = [
     institution: "Queensland University of Technology",
     gpa: 6.208,
     graduationDate: 2024,
-    notableProjects: [
+    notableAchievements: [
       {
-        title: "Project Title",
-        description: "Project description...",
-        grade: "A+",
+        title:
+          "4x QUT Executive Deans' Commendation for Academic Excellence (S1 2023, S2 2023, S1 2024, S2 2024)",
+        description:
+          "Awarded to students who achieve a GPA of 6.5 or higher for a given semester.",
+      },
+      {
+        title: "VIS Hub Application",
+        description:
+          "Capstone Project for IFB398 & IFB399, A Web App made for the Victorian Institute of Sport to streamline communication between staff and atheletes. Written in Angular and C#.",
+        grade: "- Grade: 7",
+      },
+      {
+        title: "Paper on Anonymity in Encrypted Messengers",
+        description:
+          "Research paper for CAB340 - Cryptography, on assessing the anonymity in Signal, WhatsApp and Session messengers.",
+        grade: "- Grade: 7",
+      },
+      {
+        title: "Murray Darling Basin Water Monitoring System in ",
+        description:
+          "Major Blockchain project for IFB452 - Blockchain Blockchain Technologies, on creating a blockchain-based water monitoring system for the Murray Darling Basin, to combat water theft and flood plain harvesting in the region. Written in Solidity, with a quick React front-end.",
+        grade: "- Grade: 7",
+      },
+      {
+        title: "Elevator Control System",
+        description:
+          "Major project for CAB403 - Systems Programming, on creating an elevator control system in C, with a safety critical section. The project was written in C, and was designed to simulate an elevator system in a building, with an elevator safety system that was required to be written in MISRA C.",
+        grade: "- Grade: 7",
+      },
+      {
+        title: "File Compression System on AWS",
+        description:
+          "Major project for CAB432 - Cloud Computing, on creating a file compression system on AWS, utilising Docker, S3, EC2, Elasticache, Load Balancing and Auto-scaling the system to handle large amounts of data. The project was written in React and Node.js",
+        grade: "- Grade: 7",
       },
     ],
   },
@@ -92,7 +123,7 @@ export const education: Education[] = [
     degree: "Queensland Certificate of Education",
     institution: "St Edmund's College",
     graduationDate: 2018,
-    notableProjects: [
+    notableAchievements: [
       {
         title: "Top Achiever",
         description: "Biological Science",
@@ -103,7 +134,7 @@ export const education: Education[] = [
 
 export const personalInfo: PersonalInfo = {
   name: "Brandon Wiedman",
-  bio: "Passionate software developer in Brisbane, Queensland with experience in web development and a strong interest in open source.",
+  bio: "Passionate software developer in Brisbane, Queensland with experience in web development and a strong interest in open source. I'm an avid home-labber and Linux enthusiast.",
   interests: ["Open Source", "Linux", "Gaming", "Web Development"],
   githubUrl: "https://github.com/WhatTheShuck",
   linkedinUrl: "https://au.linkedin.com/in/brandon-wiedman-541965239",

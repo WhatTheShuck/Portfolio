@@ -10,8 +10,8 @@ const Header = () => {
 
   const navigationItems = [
     { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
     { href: "#education", label: "Education" },
+    { href: "#experience", label: "Experience" },
   ];
 
   const socialLinks = [

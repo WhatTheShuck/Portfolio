@@ -26,7 +26,7 @@ export interface Education {
   institution: string;
   gpa?: number;
   graduationDate: number;
-  notableProjects: {
+  notableAchievements: {
     title: string;
     description: string;
     grade?: string;
