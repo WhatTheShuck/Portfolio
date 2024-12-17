@@ -49,12 +49,20 @@ export const projects: Project[] = [
 
 export const workExperience: WorkExperience[] = [
   {
-    title: "Helpdesk Officer",
+    title: "IT Support Officer",
     company: "KSB Australia",
     location: "Bundamba, QLD",
     startDate: new Date("2022-10-24"),
-    description: "Provided technical support and solutions...",
-    responsibilities: ["Resolved technical issues for 100+ users"],
+    description:
+      "Provided level 1 & 2 helpdesk technical support, as well as liaised with MSP & Global Company IT regarding level 3+ support. Acting IT Manager for 3 months, while the role was vacant (Aug-Nov 2024)",
+    responsibilities: [
+      "Resolved technical issues for 100+ users",
+      "Administrate a hybrid Entra ID & AD environment",
+      "Administrate and patch Cisco Meraki Switches & APs",
+      "Administrate and patch Fortinet firewalls",
+      "Coordinate between local and global IT teams to align technology initiatives while maintaining site-specific requirements",
+      "Level 1 & 2 helpdesk technical support",
+    ],
     skills: ["Technical Support", "Problem Solving", "Communication"],
   },
   {
@@ -90,7 +98,7 @@ export const education: Education[] = [
       {
         title: "VIS Hub Application",
         description:
-          "Capstone Project for IFB398 & IFB399, A Web App made for the Victorian Institute of Sport to streamline communication between staff and atheletes. Written in Angular and C#.",
+          "In a team of 4 students (3 devs, 1 project manager), I made a Web App made for the Victorian Institute of Sport to streamline communication between staff and atheletes. Written in Angular and C#.",
         grade: "- Grade: 7",
       },
       {
@@ -124,6 +132,10 @@ export const education: Education[] = [
     institution: "St Edmund's College",
     graduationDate: 2018,
     notableAchievements: [
+      {
+        title: "OP(Overall Position): 4",
+        description: "Equivalent ATAR 95",
+      },
       {
         title: "Top Achiever",
         description: "Biological Science",
