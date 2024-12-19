@@ -1,4 +1,4 @@
-export interface Project {
+type ProjectBase = {
   title: string;
   description: string;
   githubUrl?: string;
@@ -8,7 +8,21 @@ export interface Project {
   featured: boolean;
   startDate: Date;
   endDate?: Date;
-}
+};
+
+type ProjectWithImage = ProjectBase & {
+  image: string;
+  imageWidth: number;
+  imageHeight: number;
+};
+
+type ProjectWithoutImage = ProjectBase & {
+  image?: never;
+  imageWidth?: never;
+  imageHeight?: never;
+};
+
+export type Project = ProjectWithImage | ProjectWithoutImage;
 
 export interface WorkExperience {
   title: string;

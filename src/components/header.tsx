@@ -4,14 +4,15 @@ import { useState } from "react";
 import { ModeToggle } from "@/components/ui/theme-toggle";
 import { Github, Linkedin, Mail, Menu } from "lucide-react";
 import { personalInfo } from "@/lib/data";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { href: "#projects", label: "Projects" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience" },
+    { href: "/#projects", label: "Projects" },
+    { href: "/#education", label: "Education" },
+    { href: "/#experience", label: "Experience" },
   ];
 
   const socialLinks = [
@@ -37,9 +38,11 @@ const Header = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-foreground">
-              {personalInfo.name}
-            </span>
+            <Link href="/">
+              <span className="text-xl font-bold text-foreground">
+                {personalInfo.name}
+              </span>
+            </Link>
           </div>
 
           {/* Desktop navigation */}

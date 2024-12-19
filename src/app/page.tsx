@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, ExternalLink, Github } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,7 @@ export default function Home() {
     <div className={`min-h-screen bg-background ${inter.className}`}>
       <Header />
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-16">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-16">
         {/* About Section */}
         <section id="about" className="space-y-6">
           <h2 className="text-3xl font-bold text-foreground">About Me</h2>
@@ -28,22 +30,25 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* Projects Section */}
         <section id="projects" className="space-y-6">
           <h2 className="text-3xl font-bold text-foreground">
             Featured Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {projects.map((project) => (
-              <Card
+              <div
                 key={project.title}
-                className="hover:shadow-lg transition-shadow"
+                className="group hover:bg-secondary grid grid-cols-1 md:grid-cols-auto md:grid-flow-col gap-6 border border-accent rounded-lg p-6"
               >
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <CardTitle>{project.title}</CardTitle>
-                    <div className="flex gap-2">
+                {/* Left column - content*/}
+                <div className="flex flex-col justify-between space-y-6 md:min-w-[350px] md:max-w-xl">
+                  {/* Header */}
+                  <div className="flex items-center justify-between">
+                    <h1 className="text-2xl font-bold text-foreground">
+                      {project.title}
+                    </h1>
+                    <div className="flex gap-4">
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
@@ -51,39 +56,72 @@ export default function Home() {
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-foreground"
                         >
-                          <Github size={20} />
+                          <Github size={24} />
                         </a>
                       )}
                       {project.liveUrl && (
-                        <a
+                        <Link
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-foreground"
                         >
-                          <ExternalLink size={20} />
-                        </a>
+                          <ExternalLink size={24} />
+                        </Link>
                       )}
                     </div>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
-                        {tech}
-                      </Badge>
-                    ))}
+                  {/* Description */}
+                  <div>
+                    <p className="text-muted-foreground">
+                      {project.description}
+                    </p>
                   </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar size={16} className="mr-2" />
-                    {project.startDate.toLocaleDateString()}
-                    {project.endDate &&
-                      ` - ${project.endDate.toLocaleDateString()}`}
+                  {/* Tech & date for bottom section */}
+                  <div className="space-y-4 pt-4 border-t border-accent">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <Badge
+                          key={tech}
+                          className="group-hover:bg-primary"
+                          variant="secondary"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar size={16} className="mr-2" />
+                      {project.startDate.toLocaleDateString()}
+                      {project.endDate &&
+                        ` - ${project.endDate.toLocaleDateString()}`}
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+                {/* Image section - right column */}
+                {project.image && (
+                  <div className="hidden md:flex items-center justify-center md:w-auto">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={project.imageWidth}
+                      height={project.imageHeight}
+                      className="group-hover:scale-[1.15] transition-transform rounded-lg shadow-md"
+                      style={{
+                        maxHeight:
+                          project.imageHeight > project.imageWidth
+                            ? "300px"
+                            : "auto",
+                        maxWidth:
+                          project.imageHeight > project.imageWidth
+                            ? "150px"
+                            : "350px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </section>
