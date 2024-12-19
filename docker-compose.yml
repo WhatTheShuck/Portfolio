@@ -1,0 +1,13 @@
+services:
+  nextjs-app:
+    container_name: portfolio-brandon
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3069:3069"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    restart: unless-stopped
