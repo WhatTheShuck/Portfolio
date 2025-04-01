@@ -18,6 +18,20 @@ export const projects: Project[] = [
     imageHeight: 2796,
   },
   {
+    title: "Next HRT",
+    description:
+      "A piece of internal HR software for KSB Australia. This was a replacement for an internal software, called HRT, which was an Access Database program written in 2013. Due to numerous issues with the deployment and access around the aging software, I developed an MVP, gained approval and set out to rewrite the program with more modern concepts and to meet the current user requirements. I scoped, developed, got feedback and all the jazz on my own for this project. ",
+    githubUrl: "https://github.com/WhatTheShuck/NextHRT",
+    liveUrl: "https://hrt.ksb.com.au",
+    technologies: ["NextJS", "TypeScript", "Prisma", "SQLite"],
+    status: "in-progress",
+    featured: true,
+    startDate: new Date("2025-01-17"),
+    image: "/nextHRT.png",
+    imageHeight: 2361,
+    imageWidth: 1118,
+  },
+  {
     title: "Ravenswatch.pro",
     description:
       "A Wiki and builds site for the game Ravenswatch. A collaborative project with close friends.",
@@ -36,7 +50,7 @@ export const projects: Project[] = [
     description:
       "A music tracking platform that leverages the Deezer API to search for artists and pull their recent releases. A personal project, which is a continuation of an application that I once used, called Tune Detective. It also served as an important foundation for building my understanding of the Angular framework and TypeScript, without compromising the VISHub project for the VIS.",
     githubUrl: "https://github.com/WhatTheShuck/Tune-Detective-2",
-    liveUrl: "https://tunedetective2.shuckle.uk",
+    liveUrl: "https://tunedetective2.what-the-shuck.com",
     technologies: ["Angular", "TypeScript", "Material Angular"],
     status: "in-progress",
     featured: true,
@@ -45,6 +59,7 @@ export const projects: Project[] = [
     imageHeight: 2361,
     imageWidth: 1118,
   },
+
   {
     title: "Portfolio",
     description: "This portfolio site. The one you're on now :)",
@@ -59,12 +74,37 @@ export const projects: Project[] = [
 
 export const workExperience: WorkExperience[] = [
   {
+    title: "IT Supervisor",
+    company: "KSB Australia",
+    location: "Bundamba, QLD",
+    startDate: new Date("2025-03-25"),
+    description:
+      "Promoted to the role of IT Supervisor being acting IT Manager for an extended period of time. New IT Support Officer joined the team in *TBD* to fill my role and handle the level 1 and 2 issues. Managed this little homie remotely. Wrote some policies and other stuff. Did the NextHrt Project. ",
+    responsibilities: [
+      "Resolved technical issues for 100+ users",
+      "Administrate a hybrid Entra ID & AD environment",
+      "Administrate and patch Cisco Meraki Switches & APs",
+      "Administrate and patch Fortinet firewalls",
+      "Coordinate between local and global IT teams to align technology initiatives while maintaining site-specific requirements",
+      "2+ technical support",
+      "Managed an IT Support Officer",
+      "Wrote IT Policies and Procedures",
+    ],
+    skills: [
+      "Managing",
+      "Technical Support",
+      "Problem Solving",
+      "Communication",
+    ],
+  },
+  {
     title: "IT Support Officer",
     company: "KSB Australia",
     location: "Bundamba, QLD",
     startDate: new Date("2022-10-24"),
+    endDate: new Date("2025-03-24"),
     description:
-      "Provided level 1 & 2 helpdesk technical support, as well as liaised with MSP & Global Company IT regarding level 3+ support. Acting IT Manager for 3 months, while the role was vacant (Aug-Nov 2024)",
+      "Provided level 1 & 2 helpdesk technical support, as well as liaised with MSP & Global Company IT regarding level 3+ support. Acting IT Manager for 6 months, while the role was vacant (Aug-Nov 2024 & Jan-Mar 2025)",
     responsibilities: [
       "Resolved technical issues for 100+ users",
       "Administrate a hybrid Entra ID & AD environment",
