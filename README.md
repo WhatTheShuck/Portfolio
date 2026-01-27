@@ -46,7 +46,7 @@ A modern, responsive portfolio website built with Next.js and Tailwind CSS.
    ```
 
 ### Using Docker
-
+You will need to edit the next.config.ts file to set the output to "standalone" before building the Docker image. This is because I changed the hosting from Docker to Github pages. 
 1. Build the Docker image
    ```sh
    docker compose build

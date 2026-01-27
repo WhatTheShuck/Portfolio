@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,14 +55,14 @@ export default function Home() {
                         </a>
                       )}
                       {project.liveUrl && (
-                        <Link
+                        <a
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-foreground"
                         >
                           <ExternalLink size={24} />
-                        </Link>
+                        </a>
                       )}
                     </div>
                   </div>
