@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ExternalLink, Github } from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,8 +11,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className={`min-h-screen bg-background ${inter.className}`}>
-      <Header />
-
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 space-y-16">
         {/* About Section */}
         <section id="about" className="space-y-6">
@@ -217,8 +213,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description:
       "A Progressive Web App made for the Victorian Institute of Sport to streamline communication between staff and atheletes. My Capstone project for university, where I was in a group of 4 students (3 devs, 1 project manager) tasked with completing this project for the VIS. The code for this project can't be viewed, due to some of the VIS data being sensitive, however, clicking the link here will take you to the demo video produced as part of the assignment, which goes through many of the features and goals of the project.",
     githubUrl: "https://github.com/WhatTheShuck/VISHUB-IFB399-Capstone",
-    liveUrl: "/VISHub",
+    liveUrl: "/vishub",
     technologies: ["Angular", "TypeScript", "C#", ".NET", "Syncfusion"],
     status: "completed",
     featured: true,
@@ -28,8 +28,8 @@ export const projects: Project[] = [
     featured: true,
     startDate: new Date("2025-01-17"),
     image: "/nextHRT.png",
-    imageHeight: 2361,
-    imageWidth: 1118,
+    imageHeight: 1080,
+    imageWidth: 1920,
   },
   {
     title: "Ravenswatch.pro",
@@ -42,8 +42,8 @@ export const projects: Project[] = [
     featured: true,
     startDate: new Date("2024-08-24"),
     image: "/rwpro.png",
-    imageWidth: 1916,
-    imageHeight: 1064,
+    imageWidth: 1920,
+    imageHeight: 1080,
   },
   {
     title: "TuneDetective 2",
@@ -200,9 +200,9 @@ export const personalInfo: PersonalInfo = {
   interests: [
     "Open Source",
     "Linux",
+    "Volleyball",
     "Gaming",
     "Web Development",
-    "Longboarding",
   ],
   githubUrl: "https://github.com/WhatTheShuck",
   linkedinUrl: "https://au.linkedin.com/in/brandon-wiedman-541965239",
