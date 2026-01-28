@@ -79,7 +79,7 @@ export const workExperience: WorkExperience[] = [
     location: "Bundamba, QLD",
     startDate: new Date("2025-03-25"),
     description:
-      "Promoted to the role of IT Supervisor being acting IT Manager for an extended period of time. New IT Support Officer joined the team in *TBD* to fill my role and handle the level 1 and 2 issues. Managed this little homie remotely. Wrote some policies and other stuff. Did the NextHrt Project. ",
+      "Promoted to IT Supervisor after serving as Acting IT Manager for an extended period, demonstrating rapid career advancement within the organisation. Leading national IT operations for KSB Australia, including infrastructure management, vendor relationships, and a major global tenant migration project. Manage IT budget, supervise IT Support Officer, and developed comprehensive IT policies and procedures. Independently scoped, designed, and deployed Next HRT—a full-stack enterprise HR management system built with Next.js, TypeScript, and Prisma—replacing legacy Access database software and significantly improving operational efficiency.",
     responsibilities: [
       "Resolved technical issues for 100+ users",
       "Administrate a hybrid Entra ID & AD environment",
