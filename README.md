@@ -1,74 +1,46 @@
-# My Portfolio Website
+# Astro Starter Kit: Basics
 
-A modern, responsive portfolio website built with Next.js and Tailwind CSS.
+```sh
+pnpm create astro@latest -- --template basics
+```
 
-## 🚀 Features
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- Fast and SEO-friendly with Next.js
-- Responsive design using Tailwind CSS
-- Dark/Light mode support
-- Fast page transitions
-- Optimized images with Next.js Image component
-- Clean and minimal design
+## 🚀 Project Structure
 
-## 💻 Tech Stack
+Inside of your Astro project, you'll see the following folders and files:
 
-- [Next.js](https://nextjs.org/) - React framework for production
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Shadcn/ui](https://ui.shadcn.com/) - UI components
-- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
 
-## 🛠️ Installation & Set Up
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-### Local Development
+## 🧞 Commands
 
-1. Clone the repository
-   ```sh
-   git clone https://github.com/WhatTheShuck/Portfolio.git
-   ```
+All commands are run from the root of the project, from a terminal:
 
-2. Edit Data
-   - Edit the `data.ts` file with your details and projects
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-3. Install dependencies
-   ```sh
-   pnpm install
-   ```
+## 👀 Want to learn more?
 
-4. Start the development server
-   ```sh
-   pnpm run dev
-   ```
-
-5. Build for production
-   ```sh
-   pnpm run build
-   ```
-
-### Using Docker
-You will need to edit the next.config.ts file to set the output to "standalone" before building the Docker image. This is because I changed the hosting from Docker to Github pages. 
-1. Build the Docker image
-   ```sh
-   docker compose build
-   ```
-
-2. Start the container
-   ```sh
-   docker compose up
-   ```
-
-3. Stop the container
-   ```sh
-   docker compose down
-   ```
-
-The application will be available at `http://localhost:3000`.
-
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! But this is my personal portfolio website, so I may not accept all pull requests. Feel free to fork the project and make your own version.
-
-## 🌐 Website
-
-You can find the live website at [BrandonWiedman.com](https://brandonwiedman.com/).
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
