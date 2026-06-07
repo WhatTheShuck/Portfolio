@@ -1,0 +1,37 @@
+---
+import type { Education } from '../lib/types';
+
+interface Props {
+  edu: Education;
+}
+
+const { edu } = Astro.props;
+---
+
+<article class="border border-border rounded-lg p-6 hover:bg-surface transition-colors space-y-4">
+  <div class="flex items-start justify-between gap-4">
+    <div>
+      <h3 class="text-lg font-bold text-fg">{edu.degree}</h3>
+      <p class="text-fg-muted text-sm">{edu.institution}</p>
+    </div>
+    <span class="text-xs text-fg-muted shrink-0 pt-1">{edu.graduationDate}</span>
+  </div>
+
+  {edu.gpa && (
+    <p class="text-sm text-fg-muted">GPA: {edu.gpa}</p>
+  )}
+
+  <div>
+    <h4 class="text-sm font-semibold text-fg mb-2">Notable Achievements & Projects</h4>
+    <ul class="space-y-2">
+      {edu.notableAchievements.map(item => (
+        <li class="text-sm">
+          <span class="text-fg">
+            {item.title}{item.grade && <span class="text-fg-muted"> {item.grade}</span>}
+          </span>
+          <p class="text-fg-muted mt-0.5 leading-relaxed">{item.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>

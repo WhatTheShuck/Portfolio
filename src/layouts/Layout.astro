@@ -1,23 +1,50 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { THEME_SLUGS, DARK_THEME_SLUGS, LIGHT_THEME_SLUGS } from '../lib/themes';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Brandon Wiedman',
+  description = 'Software developer in Brisbane, QLD.',
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <script is:inline define:vars={{ THEME_SLUGS, DARK_THEME_SLUGS, LIGHT_THEME_SLUGS }}>
+      const lockedTheme = localStorage.getItem('theme-locked');
+      if (lockedTheme && THEME_SLUGS.includes(lockedTheme)) {
+        document.documentElement.setAttribute('data-theme', lockedTheme);
+      } else {
+        const savedMode = localStorage.getItem('theme-mode');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const mode = savedMode || (systemDark ? 'dark' : 'light');
+        const pool = mode === 'dark' ? DARK_THEME_SLUGS : LIGHT_THEME_SLUGS;
+        const theme = pool[Math.floor(Math.random() * pool.length)];
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    </script>
+  </head>
+  <body class="bg-bg text-fg min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+import type { ValueProp } from '../lib/types';
+import { Sparkles, Banknote, MessageSquare } from 'lucide-react';
+
+interface Props {
+  valueProp: ValueProp;
+}
+
+const { valueProp } = Astro.props;
+
+const iconMap = {
+  Sparkles,
+  Banknote,
+  MessageSquare,
+};
+
+const Icon = iconMap[valueProp.icon];
+---
+
+<div class="bg-bg-subtle border border-border rounded-lg p-6 flex flex-col gap-3">
+  <Icon size={28} className="text-accent" aria-hidden="true" />
+  <h3 class="text-lg font-bold text-fg">{valueProp.heading}</h3>
+  <p class="text-fg-muted text-sm leading-relaxed">{valueProp.body}</p>
+</div>

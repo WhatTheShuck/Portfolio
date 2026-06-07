@@ -1,11 +1,33 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import EducationCard from '../components/EducationCard.astro';
+import { projects, workExperience, education } from '../lib/data';
 ---
 
 <Layout>
-	<Welcome />
+  <Hero />
+
+  <section id="projects" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-8">
+    <h2 class="text-3xl font-bold text-fg">Featured Projects</h2>
+    <div class="space-y-6">
+      {projects.map(p => <ProjectCard project={p} />)}
+    </div>
+  </section>
+
+  <section id="experience" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-8">
+    <h2 class="text-3xl font-bold text-fg">Work Experience</h2>
+    <div class="space-y-6">
+      {workExperience.map(j => <ExperienceCard job={j} />)}
+    </div>
+  </section>
+
+  <section id="education" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-8">
+    <h2 class="text-3xl font-bold text-fg">Education</h2>
+    <div class="space-y-6">
+      {education.map(e => <EducationCard edu={e} />)}
+    </div>
+  </section>
 </Layout>
