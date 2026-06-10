@@ -55,3 +55,26 @@ export interface PersonalInfo {
   linkedinUrl?: string;
   email: string;
 }
+
+export interface ValueProp {
+  heading: string;
+  body: string;
+  icon: "Sparkles" | "Banknote" | "MessageSquare";
+}
+
+export interface CaseStudyQuote {
+  text: string;
+  attribution: string;
+}
+
+export interface CaseStudy {
+  kind: "client" | "production";
+  title: string;
+  preface: string | null;
+  problem: string;
+  approach: string;
+  outcome: string;
+  quote: CaseStudyQuote | null;
+  liveUrl: string | null;
+  image: string | null;
+}

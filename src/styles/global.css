@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg:         #1e1e2e;
+  --color-bg-subtle:  #313244;
+  --color-fg:         #cdd6f4;
+  --color-fg-muted:   #a6adc8;
+  --color-border:     #45475a;
+  --color-accent:     #cba6f7;
+  --color-accent-fg:  #1e1e2e;
+  --color-surface:    #585b70;
+}
+
+/* ─── Dark themes ─────────────────────────────────────────── */
+
+[data-theme="catppuccin-mocha"] {
+  --color-bg:         #1e1e2e;
+  --color-bg-subtle:  #313244;
+  --color-fg:         #cdd6f4;
+  --color-fg-muted:   #a6adc8;
+  --color-border:     #45475a;
+  --color-accent:     #cba6f7;
+  --color-accent-fg:  #1e1e2e;
+  --color-surface:    #585b70;
+}
+
+[data-theme="nord-dark"] {
+  --color-bg:         #2e3440;
+  --color-bg-subtle:  #3b4252;
+  --color-fg:         #eceff4;
+  --color-fg-muted:   #d8dee9;
+  --color-border:     #4c566a;
+  --color-accent:     #88c0d0;
+  --color-accent-fg:  #2e3440;
+  --color-surface:    #434c5e;
+}
+
+[data-theme="dracula"] {
+  --color-bg:         #282a36;
+  --color-bg-subtle:  #44475a;
+  --color-fg:         #f8f8f2;
+  --color-fg-muted:   #6272a4;
+  --color-border:     #44475a;
+  --color-accent:     #bd93f9;
+  --color-accent-fg:  #282a36;
+  --color-surface:    #44475a;
+}
+
+[data-theme="gruvbox-dark"] {
+  --color-bg:         #282828;
+  --color-bg-subtle:  #3c3836;
+  --color-fg:         #ebdbb2;
+  --color-fg-muted:   #bdae93;
+  --color-border:     #504945;
+  --color-accent:     #d79921;
+  --color-accent-fg:  #282828;
+  --color-surface:    #504945;
+}
+
+[data-theme="solarized-dark"] {
+  --color-bg:         #002b36;
+  --color-bg-subtle:  #073642;
+  --color-fg:         #839496;
+  --color-fg-muted:   #657b83;
+  --color-border:     #073642;
+  --color-accent:     #268bd2;
+  --color-accent-fg:  #fdf6e3;
+  --color-surface:    #073642;
+}
+
+[data-theme="tokyo-night"] {
+  --color-bg:         #1a1b26;
+  --color-bg-subtle:  #24283b;
+  --color-fg:         #c0caf5;
+  --color-fg-muted:   #565f89;
+  --color-border:     #292e42;
+  --color-accent:     #7aa2f7;
+  --color-accent-fg:  #1a1b26;
+  --color-surface:    #292e42;
+}
+
+[data-theme="one-dark"] {
+  --color-bg:         #282c34;
+  --color-bg-subtle:  #21252b;
+  --color-fg:         #abb2bf;
+  --color-fg-muted:   #5c6370;
+  --color-border:     #3e4451;
+  --color-accent:     #61afef;
+  --color-accent-fg:  #282c34;
+  --color-surface:    #3e4451;
+}
+
+[data-theme="rose-pine"] {
+  --color-bg:         #191724;
+  --color-bg-subtle:  #1f1d2e;
+  --color-fg:         #e0def4;
+  --color-fg-muted:   #908caa;
+  --color-border:     #26233a;
+  --color-accent:     #c4a7e7;
+  --color-accent-fg:  #191724;
+  --color-surface:    #26233a;
+}
+
+[data-theme="ayu-mirage"] {
+  --color-bg:         #1f2430;
+  --color-bg-subtle:  #242936;
+  --color-fg:         #cbccc6;
+  --color-fg-muted:   #707a8c;
+  --color-border:     #353a45;
+  --color-accent:     #ffcc66;
+  --color-accent-fg:  #1f2430;
+  --color-surface:    #353a45;
+}
+
+[data-theme="monokai"] {
+  --color-bg:         #272822;
+  --color-bg-subtle:  #3e3d32;
+  --color-fg:         #f8f8f2;
+  --color-fg-muted:   #75715e;
+  --color-border:     #49483e;
+  --color-accent:     #a6e22e;
+  --color-accent-fg:  #272822;
+  --color-surface:    #49483e;
+}
+
+/* ─── Light themes ────────────────────────────────────────── */
+
+[data-theme="catppuccin-latte"] {
+  --color-bg:         #eff1f5;
+  --color-bg-subtle:  #e6e9ef;
+  --color-fg:         #4c4f69;
+  --color-fg-muted:   #6c6f85;
+  --color-border:     #ccd0da;
+  --color-accent:     #8839ef;
+  --color-accent-fg:  #eff1f5;
+  --color-surface:    #bcc0cc;
+}
+
+[data-theme="nord-light"] {
+  --color-bg:         #eceff4;
+  --color-bg-subtle:  #e5e9f0;
+  --color-fg:         #2e3440;
+  --color-fg-muted:   #4c566a;
+  --color-border:     #d8dee9;
+  --color-accent:     #5e81ac;
+  --color-accent-fg:  #eceff4;
+  --color-surface:    #d8dee9;
+}
+
+[data-theme="github-light"] {
+  --color-bg:         #ffffff;
+  --color-bg-subtle:  #f6f8fa;
+  --color-fg:         #24292f;
+  --color-fg-muted:   #57606a;
+  --color-border:     #d0d7de;
+  --color-accent:     #0969da;
+  --color-accent-fg:  #ffffff;
+  --color-surface:    #f6f8fa;
+}
+
+[data-theme="gruvbox-light"] {
+  --color-bg:         #fbf1c7;
+  --color-bg-subtle:  #f2e5bc;
+  --color-fg:         #3c3836;
+  --color-fg-muted:   #7c6f64;
+  --color-border:     #d5c4a1;
+  --color-accent:     #d79921;
+  --color-accent-fg:  #fbf1c7;
+  --color-surface:    #d5c4a1;
+}
+
+[data-theme="solarized-light"] {
+  --color-bg:         #fdf6e3;
+  --color-bg-subtle:  #eee8d5;
+  --color-fg:         #657b83;
+  --color-fg-muted:   #839496;
+  --color-border:     #eee8d5;
+  --color-accent:     #268bd2;
+  --color-accent-fg:  #fdf6e3;
+  --color-surface:    #eee8d5;
+}
+
+[data-theme="ayu-light"] {
+  --color-bg:         #fafafa;
+  --color-bg-subtle:  #f3f4f5;
+  --color-fg:         #5c6166;
+  --color-fg-muted:   #8a9199;
+  --color-border:     #e7e8e9;
+  --color-accent:     #ff9940;
+  --color-accent-fg:  #ffffff;
+  --color-surface:    #e7e8e9;
+}
+
+[data-theme="one-light"] {
+  --color-bg:         #fafafa;
+  --color-bg-subtle:  #f0f0f1;
+  --color-fg:         #383a42;
+  --color-fg-muted:   #696c77;
+  --color-border:     #e5e5e6;
+  --color-accent:     #4078f2;
+  --color-accent-fg:  #fafafa;
+  --color-surface:    #e5e5e6;
+}
+
+[data-theme="rose-pine-dawn"] {
+  --color-bg:         #faf4ed;
+  --color-bg-subtle:  #f2e9e1;
+  --color-fg:         #575279;
+  --color-fg-muted:   #9893a5;
+  --color-border:     #dfdad9;
+  --color-accent:     #b4637a;
+  --color-accent-fg:  #faf4ed;
+  --color-surface:    #dfdad9;
+}
+
+[data-theme="tomorrow"] {
+  --color-bg:         #ffffff;
+  --color-bg-subtle:  #f7f7f7;
+  --color-fg:         #4d4d4c;
+  --color-fg-muted:   #8e908c;
+  --color-border:     #e0e0e0;
+  --color-accent:     #4271ae;
+  --color-accent-fg:  #ffffff;
+  --color-surface:    #efefef;
+}
+
+[data-theme="everforest-light"] {
+  --color-bg:         #f2efdf;
+  --color-bg-subtle:  #edeada;
+  --color-fg:         #5c6a72;
+  --color-fg-muted:   #829181;
+  --color-border:     #e0dcc7;
+  --color-accent:     #8da101;
+  --color-accent-fg:  #f2efdf;
+  --color-surface:    #e0dcc7;
+}

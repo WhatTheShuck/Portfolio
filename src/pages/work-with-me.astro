@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkWithMeHero from '../components/WorkWithMeHero.astro';
+import ValueProp from '../components/ValueProp.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import OtherWorkStrip from '../components/OtherWorkStrip.astro';
+import BriefForm from '../components/BriefForm.astro';
+import { valueProps, caseStudies, otherWork } from '../lib/services';
+---
+
+<Layout
+  title="Work With Me — Brandon Wiedman"
+  description="Tailored web development for Australian small and medium businesses. Custom-built websites, optional managed hosting, cheaper than off-the-shelf platforms."
+>
+  <WorkWithMeHero />
+
+  <section id="why" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-8">
+    <h2 class="text-3xl font-bold text-fg">Why tailored, not templated</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {valueProps.map((vp) => <ValueProp valueProp={vp} />)}
+    </div>
+    <p class="text-fg-muted text-sm leading-relaxed border-l-2 border-accent pl-4 max-w-3xl">
+      A one-off custom build plus my managed hosting comes in cheaper than ongoing platform subscriptions — and you keep the site you paid for.
+    </p>
+  </section>
+
+  <section id="proof" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-8">
+    <h2 class="text-3xl font-bold text-fg">Recent work</h2>
+    <div class="space-y-6">
+      {caseStudies.map((cs) => <CaseStudyCard caseStudy={cs} />)}
+    </div>
+    <div class="pt-8 space-y-4">
+      <h3 class="text-lg font-bold text-fg">Other recent builds</h3>
+      <p class="text-fg-muted text-sm">Other recent work I've built or contributed to.</p>
+      <OtherWorkStrip items={otherWork} />
+    </div>
+  </section>
+
+  <section id="apps" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <p class="text-fg-muted text-sm leading-relaxed max-w-3xl">
+      <span class="text-fg font-semibold">Also available: iOS apps in SwiftUI.</span>
+      I'm currently building my own and open to client app projects too. Mention it in your brief.
+    </p>
+  </section>
+
+  <section id="brief" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-6">
+    <div class="space-y-2">
+      <h2 class="text-3xl font-bold text-fg">Tell me about your project.</h2>
+      <p class="text-fg-muted">Fill in what you can; we can sort the rest on a call.</p>
+    </div>
+    <BriefForm />
+  </section>
+</Layout>
